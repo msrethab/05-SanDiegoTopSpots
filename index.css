@@ -3,14 +3,23 @@
 /* Styling the header */
 
 h1{
-	text-align: center;
-	margin-bottom: 2.5%;
+	 text-align: center;
+	   margin-bottom: 2.5%;
+}
+
+/* Styling the map */
+
+#map {
+    height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5%;
 }
 
 /* Styling the table */
 
 .container {
-	margin-bottom: 2.5%;
+    margin-bottom: 2.5%;
 }
 
 /* Styling the footer */

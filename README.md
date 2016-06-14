@@ -8,4 +8,13 @@ Version 1.0.0
 
 -Added simple Bootstrap 3 css stylings
 
--Kicked self over spending 3 hours figuring out how to turn JSON data into a variable only to realize that the data could be used directly
+
+
+Version 1.0.1
+
+
+-Added Google maps API and map element
+
+-Populated map element with description tags
+
+-Changed button links to have a target of blank to open links in new pages

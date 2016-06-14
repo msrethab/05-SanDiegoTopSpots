@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>San Diego Top Spots</title>
+<html>
 
-	<!-- Importing jquery -->
+<head>
+    <title>San Diego Top Spots</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+
+    <!-- Importing jquery -->
 
     <script src="jquery-1.12.4.min.js"></script>
-
     <!-- Initializing Bootstrap -->
 
     <!-- Latest compiled and minified CSS -->
@@ -21,47 +22,65 @@
     <!-- Latest compiled and minified JavaScript -->
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Running external javaScript with jQuery elements -->
+
+    <script src="index.js"></script>
+
     <!-- Linking external style sheets -->
 
     <link rel="stylesheet" href="index.css">
-
+    <style>
+      html,
+      body {
+        height: 90%;
+        margin: 0;
+        padding: 0;
+    }
+    
+    #map {
+        height: 100%;
+        
+    }
+    </style>
 </head>
+
 <body>
+    <!-- Creating a title Header -->
 
-	<!-- Creating a title Header -->
+    <header>
+        <h1>San Diego Top Spots</h1>
+    </header>
 
-	<header>
-		<h1>San Diego Top Spots</h1>
-	</header>
 
-	<!-- Create Table object with head labels and empty body -->
+    <!-- Adding a map -->
 
-	<div class="container">
-		<table class="table table-striped">
+    <div id="map"></div>
 
-			<thead>
-	      		<tr>
-	         		<th class="col-md-2">Name</th>
-	         		<th class="col-md-8">Description</th>
-	         		<th class="col-md-2">Link</th>
-	      		</tr>
+    <!--Creating a container to hold our elements -->
 
-	   		</thead>
+    <div class="container">
 
-	   		<tbody id="dataTable"></tbody>
+        <!-- Create Table object with head labels and empty body -->
 
-		</table>
-	</div>
-	
-	<!-- Create a copyright footer -->
-	
-	<footer class="centFooter">
-    	<p>&copy; 2016 Mark Srethabhakti.</p>
-	</footer>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th class="col-md-2">Name</th>
+                    <th class="col-md-8">Description</th>
+                    <th class="col-md-2">Link</th>
+                </tr>
+            </thead>
+            <tbody id="dataTable"></tbody>
+        </table>
+    </div>
 
-	<!-- Running external javaScript with jQuery elements -->
+    <!-- Create a copyright footer -->
 
-	<script src="index.js"></script>
+    <footer class="centFooter">
+        <p>&copy; 2016 Mark Srethabhakti.</p>
+    </footer>
 
 </body>
+
 </html>
