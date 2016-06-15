@@ -10,26 +10,16 @@ $(function(){
 
 	//creating array to store long string concatenation to populate table
 
+  		var tableString = new Array();
 
-  		var tableString = new Array(), j = -1;
-
- 		for (var key=0, size = data.length; key<size; key++){
- 			tableString[++j] ='<tr><td>';
-			tableString[++j] = data[key].name;
-		    tableString[++j] = '</td><td>';
-		    tableString[++j] = data[key].description;
-		    tableString[++j] = '</td><td>';
-		    tableString[++j] = '<a href="https://www.google.com/maps?q=';
-		    tableString[++j] = data[key].location;
-		    tableString[++j] = '" target="_blank" class="btn btn-primary active" role="button">Link to Google Maps</a>';
-		    tableString[++j] = '</td></tr>';
-		 }
+ 		for (var i=0 ; i < data.length; i++){
+ 			tableString[i] ='<tr><td>' + data[i].name + '</td><td>' + data[i].description + '</td><td>' +'<a href="https://www.google.com/maps?q=' + data[i].location + '" target="_blank" class="btn btn-primary active" role="button">Link to Google Maps</a></td></tr>';
+		}
 
  		$('#dataTable').html(tableString.join(''));
 	
 
-
-		//Defining initMap function for HTML to load it
+		//Defining initMap function to create and load a map to HTML
 
 		var map;
 			
@@ -43,6 +33,7 @@ $(function(){
 
 			var bounds = new google.maps.LatLngBounds();
 
+			//Creating marker and info window data arrays and populating the information
 
 			var markers = new Array();
 			var infoWindowContent = new Array();
@@ -54,10 +45,9 @@ $(function(){
 	    		
 			}
 
-
 		    var infoWindow = new google.maps.InfoWindow(), marker, i;
 
-		    // Loop through our array of markers & place each one on the map  
+		    // Loop through our array of marker data to place each one on the map  
 
 		    for( i = 0; i < markers.length; i++ ) {
 		        var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
